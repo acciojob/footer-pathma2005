@@ -1,1 +1,139 @@
-/* your code here */
+:root{
+  --bg:#0e0e10;
+  --line:#1f1f23;
+  --text:#e8eaed;
+  --muted:#a1a7b3;
+  --accent:#4f8cff;
+}
+
+footer{
+  background:var(--bg);
+  color:var(--text);
+  font:400 16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+
+footer a{
+  color:var(--muted);
+  text-decoration:none;
+}
+
+footer a:hover,
+footer a:focus{
+  color:var(--text);
+}
+
+/* top bar */
+.content{
+  max-width:1100px;
+  margin:0 auto;
+  padding:32px 16px;
+}
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between; /* space main-axis items */ 
+  gap:16px;                      /* modern spacing */ 
+  border-bottom:1px solid var(--line);
+  padding-bottom:20px;
+} /* justify-content and gap are standard in Flexbox containers [web:32][web:31] */
+
+.logo-details .logo_name{
+  font-size:28px;
+  letter-spacing:1px;
+}
+
+/* social icons */
+.media-icons{
+  display:flex;
+  gap:12px;
+} /* gap works on flex containers for gutters between items [web:31] */
+
+.media-icons a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#1a1c20;
+  color:#fff;
+  transition:transform .2s ease, background .2s ease;
+}
+.media-icons a:hover{
+  transform:translateY(-2px);
+  background:var(--accent);
+} /* basic icon button pattern; Font Awesome 4.7 icons use .fa classes in <a> or <i> tags [web:28] */
+
+/* link columns */
+.link-boxes{
+  display:flex;
+  flex-wrap:wrap;       /* allow wrapping on small screens */ 
+  gap:24px 32px;        /* row/column gaps */ 
+  padding-top:24px;
+} /* flex-wrap enables multi-line responsive columns [web:35][web:30] */
+
+.link-boxes .box{
+  list-style:none;
+  padding:0;
+  margin:0;
+  min-width:180px;
+  flex:1 1 200px;       /* grow, shrink, basis for fluid columns */ 
+} /* flex-basis controls initial main-size of items [web:2][web:31] */
+
+.link_name{
+  font-weight:600;
+  margin-bottom:10px;
+  color:#fff;
+}
+
+.box li{
+  margin:8px 0;
+}
+.box a{
+  display:inline-block;
+  padding:2px 0;
+}
+
+/* contact block can be wider */
+.link-boxes .input-box{
+  flex:1 1 240px;
+}
+
+/* bottom details */
+.bottom-details{
+  border-top:1px solid var(--line);
+  margin-top:24px;
+  background:#0b0b0c;
+}
+.bottom-details .bottom_text{
+  max-width:1100px;
+  margin:0 auto;
+  padding:14px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  align-items:center;      /* cross-axis alignment */ 
+  justify-content:space-between;
+} /* align-items and justify-content manage cross/main axis alignment in flex containers [web:38][web:32] */
+
+.bottom-details .policy_terms a{
+  margin-left:16px;
+}
+
+/* accessibility helpers for icon-only links */
+.media-icons .fa{
+  font-size:18px;
+  line-height:1;
+} /* Font Awesome icons scale with standard fa classes; size utilities like fa-2x are available if needed [web:28] */
+
+/* responsive tweaks (mobile-first) */
+@media (min-width: 576px){
+  .logo-details .logo_name{ font-size:30px; }
+}
+
+@media (min-width: 768px){
+  .link-boxes{ gap:28px 40px; }
+} /* add breakpoints where content benefits; choose sizes based on layout needs (mobile-first) [web:36][web:37] */
+
+
+
