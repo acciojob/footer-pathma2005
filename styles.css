@@ -124,7 +124,7 @@ footer .bottom-details .bottom_text {
   text-decoration: underline;
 }
 .bottom-details .bottom_text a {
-  margin-right: 10px;
+  margin-left: 20px;
 }
 @media (max-width: 900px) {
   footer .content .links-boxes {
@@ -150,14 +150,16 @@ footer .bottom-details .bottom_text {
   footer .content .links-boxes .box {
     width: calc(100% / 3 - 10px);
   }
+	
   footer .bottom-details .bottom_text {
     flex-wrap: wrap;
     padding: 20px;
+	  background-color:#1e1e1e;
   }
   .bottom-details .bottom_text span,
   .bottom-details .bottom_text a {
     text-align: center;
-    width: 100%;
+    width:45%;
   }
 }
 @media (max-width: 500px) {
